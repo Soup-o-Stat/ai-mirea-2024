@@ -1,6 +1,7 @@
 import math
 import numpy
 import pandas
+import random
 import seaborn
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
@@ -13,7 +14,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 print("Рабочая тетрадь номер 5")
 
 num_of_tasks=['1', '2', '3', '4', '5']
-data=8
+data=random.randint(1, 100)
 
 class Trigonoworker:
     def cos_find(self, cos_num):
@@ -30,10 +31,10 @@ class Trigonoworker:
         print(self.arccos_answer)
     def arcsin_find(self, arcsin_num):
         self.arcsin_answer=math.asin(arcsin_num)
-        print(self.arcsin_num)
+        print(self.arcsin_answer)
     def arctg_find(self, arctg_num):
         self.arctg_answer=math.atan(arctg_num)
-        print(self.arctg_num)
+        print(self.arctg_answer)
     def rad_find(self, grad_num):
         self.rad_answer=math.radians(grad_num)
         print(self.rad_answer)
@@ -70,47 +71,26 @@ Tree_num3=Tree(data)
 
 def task1():
     cos_num=input("Введите x для нахождения косинуса: ")
-    try:
-        cos_num=int(cos_num)
-        Trig.cos_find(cos_num)
-    except:
-        print("Ошибка в вводе данных")
+    cos_num=int(cos_num)
+    Trig.cos_find(cos_num)
     sin_num=input("Введите x для нахождения синуса: ")
-    try:
-        sin_num=int(sin_num)
-        Trig.sin_find(sin_num)
-    except:
-        print("Ошибка в вводе данных")
+    sin_num=int(sin_num)
+    Trig.sin_find(sin_num)
     tg_num=input("Введите x для нахождения косинуса: ")
-    try:
-        tg_num=int(tg_num)
-        Trig.tg_find(tg_num)
-    except:
-        print("Ошибка в вводе данных")
+    tg_num=int(tg_num)
+    Trig.tg_find(tg_num)
     arccos_num=int(input("Введите x для нахождения арккосинуса: "))
-    try:
-        arccos_num=int(arccos_num)
-        Trig.arccos_find(arccos_num)
-    except:
-        print("Ошибка в вводе данных")
+    arccos_num=int(arccos_num)
+    Trig.arccos_find(arccos_num)
     arcsin_num=input("Введите x для нахождения арксинуса: ")
-    try:
-        arcsin_num=int(arcsin_num)
-        Trig.arcsin_find(arcsin_num)
-    except:
-        print("Ошибка в вводе данных")
+    arcsin_num=int(arcsin_num)
+    Trig.arcsin_find(arcsin_num)
     arctg_num=input("Введите x для нахождения арктангенса: ")
-    try:
-        arctg_num=int(arctg_num)
-        Trig.arctg_find(arctg_num)
-    except:
-        print("Ошибка в вводе данных")
+    arctg_num=int(arctg_num)
+    Trig.arctg_find(arctg_num)
     grad_num=input("Введите значение в градусах, чтобы перевести его в радианы: ")
-    try:
-        grad_num=int(grad_num)
-        Trig.rad_find(grad_num)
-    except:
-        print("Ошибка в вводе данных")
+    grad_num=int(grad_num)
+    Trig.rad_find(grad_num)
 
 def task2():
     tree_num2=[["a", "b", "d"], ["a", "b", "e"], ["a", "c", "f"]]
